@@ -1,13 +1,14 @@
-package com.example.mvvmexample.models;
+package com.example.projetandroid.models;
 
-public class ListRepsponse extends GenericResponse {
-    private CoinData data;
+public class ListResponse extends GenericResponse {
 
-    public CoinData getData() {
+    private CoinsData data;
+
+    public CoinsData getData() {
         return data;
     }
 
-    public void setData(CoinData data) {
+    public void setData(CoinsData data) {
         this.data = data;
     }
 }

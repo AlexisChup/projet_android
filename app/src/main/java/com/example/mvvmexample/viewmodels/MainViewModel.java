@@ -1,15 +1,15 @@
-package com.example.mvvmexample.viewmodels;
+package com.example.projetandroid.viewmodels;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.mvvmexample.models.SampleModel;
+import com.example.projetandroid.models.SampleModel;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
-public class MainViewModel extends ViewModel implements IViewModel {
+public class MainViewModel extends ViewModel {
 
     private final MutableLiveData<SampleModel> data = new MutableLiveData<>();
 

@@ -1,4 +1,4 @@
-package com.example.mvvmexample.models;
+package com.example.projetandroid.models;
 
 public class SampleModel {
 

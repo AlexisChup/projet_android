@@ -1,4 +1,4 @@
-package com.example.mvvmexample;
+package com.example.projetandroid;
 
 import org.junit.Test;
 

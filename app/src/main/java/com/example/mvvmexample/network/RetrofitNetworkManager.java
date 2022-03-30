@@ -1,6 +1,6 @@
-package com.example.mvvmexample.network;
+package com.example.projetandroid.network;
 
-import com.example.mvvmexample.NetworkConstants;
+import com.example.projetandroid.NetworkConstants;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

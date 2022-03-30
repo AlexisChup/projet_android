@@ -1,4 +1,4 @@
-package com.example.mvvmexample;
+package com.example.projetandroid;
 
 import android.os.Bundle;
 
@@ -6,9 +6,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+<<<<<<< Updated upstream:app/src/main/java/com/example/mvvmexample/MainActivity.java
 import com.example.mvvmexample.databinding.ActivityMainBinding;
 import com.example.mvvmexample.viewmodels.IViewModel;
 import com.example.mvvmexample.viewmodels.RetrofitViewModel;
+=======
+import com.example.projetandroid.databinding.ActivityMainBinding;
+import com.example.projetandroid.viewmodels.IViewModel;
+import com.example.projetandroid.viewmodels.RetrofitViewModel;
+>>>>>>> Stashed changes:app/src/main/java/com/example/projetandroid/MainActivity.java
 
 import java.util.ArrayList;
 import java.util.List;

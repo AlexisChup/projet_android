@@ -1,13 +1,13 @@
-package com.example.mvvmexample.viewmodels;
+package com.example.projetandroid.viewmodels;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.mvvmexample.models.PriceResponse;
-import com.example.mvvmexample.models.SampleModel;
-import com.example.mvvmexample.network.OkHttpNetworkManager;
+import com.example.projetandroid.models.PriceResponse;
+import com.example.projetandroid.models.SampleModel;
+import com.example.projetandroid.network.OkHttpNetworkManager;
 import com.google.gson.Gson;
 
 import java.io.IOException;
@@ -16,7 +16,7 @@ import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
 
-public class OkHttpViewModel extends ViewModel implements IViewModel {
+public class OkHttpViewModel extends ViewModel {
 
     private final MutableLiveData<SampleModel> data = new MutableLiveData<>();
 
@@ -24,7 +24,6 @@ public class OkHttpViewModel extends ViewModel implements IViewModel {
         return data;
     }
 
-    @Override
     public void generateNextValue() {
         OkHttpNetworkManager.INSTANCE.bitcoinPriceRequest().enqueue(new Callback() {
             @Override
