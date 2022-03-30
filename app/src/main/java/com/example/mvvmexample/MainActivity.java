@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
         viewModel = new ViewModelProvider(this).get(RetrofitViewModel.class);
 
-        binding.nextValueButton.setOnClickListener(v -> viewModel.generateNextValue());
     }
 
     @Override
@@ -42,8 +41,12 @@ public class MainActivity extends AppCompatActivity {
 
         cryptoList.add(new Crypto("Btc", "47000"));
         cryptoList.add(new Crypto("Eth", "4200"));
+        cryptoList.add(new Crypto("Eth", "4200"));
+        cryptoList.add(new Crypto("Eth", "4200"));
+        cryptoList.add(new Crypto("Eth", "4200"));
+        cryptoList.add(new Crypto("Eth", "4200"));
 
-        customAdapter = new CustomAdapter((cryptoList));
+        customAdapter = new CustomAdapter(cryptoList);
 
         binding.myRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         binding.myRecyclerView.setAdapter(customAdapter);

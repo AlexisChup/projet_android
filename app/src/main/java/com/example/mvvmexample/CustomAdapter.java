@@ -32,7 +32,9 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     }
 
     @Override
-    public int getItemCount() { return cryptoList.size(); }
+    public int getItemCount() {
+        return cryptoList.size();
+    }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         private TextView mName;
