@@ -1,22 +1,27 @@
-package com.example.projetandroid.models;
+package com.example.mvvmexample.models;
 
 public class Coin {
-    private String price;
     private String name;
+    private String price;
 
-    public String getPrice() {
-        return price;
+    public Coin(String nameS, String priceS) {
+        name = nameS;
+        price = priceS;
     }
 
-    public void setPrice(String price) {
-        this.price = price;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public String getPrice() {
+        return price;
     }
 }

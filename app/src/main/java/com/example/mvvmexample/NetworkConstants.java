@@ -1,4 +1,4 @@
-package com.example.projetandroid;
+package com.example.mvvmexample;
 
 public class NetworkConstants {
 

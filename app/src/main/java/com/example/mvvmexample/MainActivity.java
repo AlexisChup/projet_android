@@ -1,4 +1,4 @@
-package com.example.projetandroid;
+package com.example.mvvmexample;
 
 import android.os.Bundle;
 
@@ -6,15 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-<<<<<<< Updated upstream:app/src/main/java/com/example/mvvmexample/MainActivity.java
 import com.example.mvvmexample.databinding.ActivityMainBinding;
+import com.example.mvvmexample.models.CoinsData;
 import com.example.mvvmexample.viewmodels.IViewModel;
 import com.example.mvvmexample.viewmodels.RetrofitViewModel;
-=======
-import com.example.projetandroid.databinding.ActivityMainBinding;
-import com.example.projetandroid.viewmodels.IViewModel;
-import com.example.projetandroid.viewmodels.RetrofitViewModel;
->>>>>>> Stashed changes:app/src/main/java/com/example/projetandroid/MainActivity.java
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     private IViewModel viewModel;
     private CustomAdapter customAdapter;
-    private List<Crypto> cryptoList;
+    private CoinsData coinsData;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,21 +31,19 @@ public class MainActivity extends AppCompatActivity {
         viewModel = new ViewModelProvider(this).get(RetrofitViewModel.class);
 
         binding.nextValueButton.setOnClickListener(v -> viewModel.generateNextValue());
+        viewModel.fetch10FirstCrypto();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         viewModel.getData().observe(this, sampleModel -> {
-
+            binding.dataTextView.setText(sampleModel.getData());
         });
 
-        cryptoList = new ArrayList<Crypto>();
-
-        cryptoList.add(new Crypto("Btc", "47000"));
-        cryptoList.add(new Crypto("Eth", "4200"));
-
-        customAdapter = new CustomAdapter((cryptoList));
+        viewModel.getCoinsData().observe(this, coinsData -> {
+                    customAdapter = new CustomAdapter(coinsData.getCoinList());
+        });
 
         binding.myRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         binding.myRecyclerView.setAdapter(customAdapter);

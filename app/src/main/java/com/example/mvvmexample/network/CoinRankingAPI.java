@@ -1,8 +1,8 @@
-package com.example.projetandroid.network;
+package com.example.mvvmexample.network;
 
-import com.example.projetandroid.NetworkConstants;
-import com.example.projetandroid.models.ListResponse;
-import com.example.projetandroid.models.PriceResponse;
+import com.example.mvvmexample.NetworkConstants;
+import com.example.mvvmexample.models.ListResponse;
+import com.example.mvvmexample.models.PriceResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -15,7 +15,7 @@ public interface CoinRankingAPI {
             "x-rapidapi-host: coinranking1.p.rapidapi.com",
             "x-rapidapi-key: efeaa5d79fmshe6fa6c8e321ac1dp1b25afjsnf399ab057be2"
     })
-    @GET(NetworkConstants.BITCOIN_PRICE_PATH)
+    @GET("/coin/Qwsogvtv82FCd/price")
     Call<PriceResponse> getBitcoinPrice();
 
     @Headers({
@@ -23,5 +23,6 @@ public interface CoinRankingAPI {
             "x-rapidapi-key: efeaa5d79fmshe6fa6c8e321ac1dp1b25afjsnf399ab057be2"
     })
     @GET(NetworkConstants.FIRST_10_PRICE_PATH)
-    Call<ListResponse> get10FirstCryptos();
+    Call<ListResponse> getFirst10Coins();
+
 }

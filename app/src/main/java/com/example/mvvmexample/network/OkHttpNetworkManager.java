@@ -1,6 +1,6 @@
-package com.example.projetandroid.network;
+package com.example.mvvmexample.network;
 
-import com.example.projetandroid.NetworkConstants;
+import com.example.mvvmexample.NetworkConstants;
 
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
@@ -21,6 +21,15 @@ public class OkHttpNetworkManager {
     public Call bitcoinPriceRequest() {
         Request request = baseRequestBuilder()
                 .url(NetworkConstants.BASE_URL + NetworkConstants.BITCOIN_PRICE_PATH)
+                .get()
+                .build();
+
+        return client.newCall(request);
+    }
+
+    public Call getFirst10() {
+        Request request = baseRequestBuilder()
+                .url(NetworkConstants.BASE_URL + NetworkConstants.FIRST_10_PRICE_PATH)
                 .get()
                 .build();
 

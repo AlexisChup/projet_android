@@ -1,13 +1,13 @@
-package com.example.projetandroid.viewmodels;
+package com.example.mvvmexample.viewmodels;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.projetandroid.models.ListResponse;
-import com.example.projetandroid.models.PriceResponse;
-import com.example.projetandroid.models.SampleModel;
-import com.example.projetandroid.network.RetrofitNetworkManager;
+import com.example.mvvmexample.models.ListResponse;
+import com.example.mvvmexample.models.PriceResponse;
+import com.example.mvvmexample.models.SampleModel;
+import com.example.mvvmexample.network.RetrofitNetworkManager;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -41,7 +41,7 @@ public class RetrofitViewModel extends ViewModel implements IViewModel {
 
     @Override
     public void fetch10FirstCrypto() {
-        RetrofitNetworkManager.coinRankingAPI.get10FirstCryptos().enqueue(new Callback<ListResponse>() {
+        RetrofitNetworkManager.coinRankingAPI.getFirst10Coins().enqueue(new Callback<ListResponse>() {
             @Override
             public void onResponse(Call<ListResponse> call, Response<ListResponse> response) {
                 if (response.body() != null) {

@@ -1,4 +1,4 @@
-package com.example.projetandroid.models;
+package com.example.mvvmexample.models;
 
 public class ListResponse extends GenericResponse {
 

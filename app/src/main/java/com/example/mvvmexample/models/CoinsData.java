@@ -1,15 +1,15 @@
-package com.example.projetandroid.models;
+package com.example.mvvmexample.models;
 
 import java.util.List;
 
 public class CoinsData {
-    private List<Coin> coinList;
+    private List<Coin> coins;
 
     public List<Coin> getCoinList() {
-        return coinList;
+        return coins;
     }
 
     public void setCoinList(List<Coin> coinList) {
-        this.coinList = coinList;
+        this.coins = coinList;
     }
 }
