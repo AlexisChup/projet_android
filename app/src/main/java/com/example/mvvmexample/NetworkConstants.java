@@ -8,5 +8,5 @@ public class NetworkConstants {
     public static final String HOST_HEADER_NAME = "x-rapidapi-host";
     public static final String HOST_HEADER_VALUE = "coinranking1.p.rapidapi.com";
     public static final String KEY_HEADER_NAME = "x-rapidapi-key";
-    public static final String KEY_HEADER_VALUE = "efeaa5d79fmshe6fa6c8e321ac1dp1b25afjsnf399ab057be2";
+    public static final String KEY_HEADER_VALUE = "ddb5321305mshb114cb717ed3954p1cee6ejsn47d63d8e0686";
 }
