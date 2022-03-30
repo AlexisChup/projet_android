@@ -30,8 +30,11 @@ public class MainActivity extends AppCompatActivity {
 
         viewModel = new ViewModelProvider(this).get(RetrofitViewModel.class);
 
+<<<<<<< HEAD
         binding.nextValueButton.setOnClickListener(v -> viewModel.generateNextValue());
         viewModel.fetch10FirstCrypto();
+=======
+>>>>>>> 290b9cf0ea5358eb1da150a8ace26a9923b8bcf9
     }
 
     @Override
